@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ mensagem: "Fipe Carros" });
+  res.status(200).json({ mensagem: "Marca do Carros" });
 }
