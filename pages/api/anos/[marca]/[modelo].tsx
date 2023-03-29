@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import router from "next/router";
 
-const BASE_URL = "https://parallelum.com.br/fipe/api/v1/carros/marcas/";
+const BASE_URL = process.env.BASE_API_FIPE;
 
 export default async function handler(
   req: NextApiRequest,
@@ -16,13 +16,11 @@ export default async function handler(
     });
 
     if (anos.error) {
-      res
-        .status(404)
-        .json({
-          modelos: [],
-          status: false,
-          error: "Ano do modelo não foi localizado",
-        });
+      res.status(404).json({
+        modelos: [],
+        status: false,
+        error: "Ano do modelo não foi localizado",
+      });
     }
     res.status(200).json({ ...anos, status: true, error: "" });
   } catch (error) {

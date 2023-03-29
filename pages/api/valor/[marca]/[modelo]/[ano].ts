@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import router from "next/router";
 
-const BASE_URL = "https://parallelum.com.br/fipe/api/v1/carros/marcas/";
+const BASE_URL = process.env.BASE_API_FIPE;
 
 export default async function handler(
   req: NextApiRequest,
