@@ -9,9 +9,7 @@ function GlobalStyles() {
         margin: 2em auto;
         padding-top: 200px;
       }
-      h1 {
-        color: green;
-      }
+      
       
     `}</style>
   );
