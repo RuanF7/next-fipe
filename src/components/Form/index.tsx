@@ -1,6 +1,7 @@
 import {  Button, TextField, MenuItem, Card, CardContent, Grid } from "@mui/material";
 import React, { useState } from "react";
 import SendIcon from '@mui/icons-material/Send';
+import Image from "next/image";
 
 function Form() {
   const [marcas, setMarcas] = useState<string>("1");
@@ -9,13 +10,23 @@ function Form() {
 
   return (
     <Card>
-      <CardContent>
-
-        <Grid xs={12} item>
-          
-        </Grid>
+      <CardContent>       
 
         <Grid container spacing={4}>
+        <Grid xs={12} md={2} item>
+          <Image 
+          src="/Images/ford.png" 
+          alt='Picture of gm logo'
+          width={120}
+          height={80}
+          style={{borderRadius: '50%'}}
+          >
+          </Image>
+          <TextField label='Ford' variant="outlined" />
+          <TextField label='Ranger' variant="outlined"/>
+          <TextField label='2001' variant="outlined"/>
+                   
+        </Grid>
           <Grid xs={12}  item>
             <TextField             
               label="Selecionar marca"
