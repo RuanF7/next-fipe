@@ -8,7 +8,7 @@ function Footer() {
         <div className="row">
           <div className="col-sm-12 col-md-6">
             <h6>corre cadeirante</h6>
-            <p className="text-justify"> <i> Motivo da criação </i> <p>nós criamos com a intenção de aperfeiçoar nossas habilidades, e também com o objetivo de ficar mais próximo do dia dia de um mundo corporativo esse texto é um exemplo será mudado </p></p>
+            <p className="text-justify"> <i> Motivo da criação </i> nós criamos com a intenção de aperfeiçoar nossas habilidades, e também com o objetivo de ficar mais próximo do dia dia de um mundo corporativo esse texto é um exemplo será mudado </p>
           </div>
 
           <div className="col-xs-6 col-md-3">
