@@ -19,21 +19,15 @@ function Form() {
               alt='Picture of gm logo'
               width={120}
               height={80}
-              style={{ borderRadius: '50%', display: 'flex', alignItems: 'center', margin: '0px 0px 0px 60px' }}
+              style={{ borderRadius: '50%', display: 'flex', alignItems: 'center', margin: '0px 0px 0px 90px' }}
             >
             </Image>
-            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
-              <TextField  label='Ford' variant="outlined" />
-            </Grid>
-            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
-              <TextField label='Ranger' variant="outlined" />
-            </Grid>
-            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
-              <TextField  label='2001' variant="outlined" />
-            </Grid>
+            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 40px 40px 60px' }} >
+              <TextField  label='Ford Ranger 1994' multiline rows={7} variant="outlined" />
+            </Grid>           
           </Grid>
           <Grid>
-          <Grid xs={12} item>
+          <Grid xs={12} item style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 0px 0px 200px' }}>
             <TextField
               label="Selecionar marca"
               select
@@ -54,7 +48,7 @@ function Form() {
 
           </Grid>
 
-          <Grid xs={12} item>
+          <Grid xs={12} item style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 0px 0px 200px' }}>
             <TextField
               label="Selecionar modelo"
               select
@@ -71,7 +65,7 @@ function Form() {
               <MenuItem value="ranger">Ranger</MenuItem>
             </TextField>
           </Grid>
-          <Grid xs={12} item>
+          <Grid xs={12} item style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 0px 0px 200px' }}>
             <TextField
               label="Selecionar ano"
               select
@@ -89,7 +83,7 @@ function Form() {
             </TextField>
           </Grid>
 
-          <Grid xs={12} item>
+          <Grid xs={12} item style={{margin: '40px 0px 0px 200px'}}>
             <Button variant="contained" endIcon={<SendIcon />}>Enviar</Button>
           </Grid>
 
