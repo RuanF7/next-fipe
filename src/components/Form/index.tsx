@@ -1,4 +1,4 @@
-import {  Button, TextField, MenuItem, Card, CardContent, Grid } from "@mui/material";
+import { Button, TextField, MenuItem, Card, CardContent, Grid } from "@mui/material";
 import React, { useState } from "react";
 import SendIcon from '@mui/icons-material/Send';
 import Image from "next/image";
@@ -9,31 +9,37 @@ function Form() {
   const [ano, setAno] = useState<string>("1");
 
   return (
-    <Card>
-      <CardContent>       
+    <Card style={{ margin: '200px' }}>
+      <CardContent>
 
-        <Grid container spacing={4}>
-        <Grid xs={12} md={2} item>
-          <Image 
-          src="/Images/ford.png" 
-          alt='Picture of gm logo'
-          width={120}
-          height={80}
-          style={{borderRadius: '50%'}}
-          >
-          </Image>
-          <TextField label='Ford' variant="outlined" />
-          <TextField label='Ranger' variant="outlined"/>
-          <TextField label='2001' variant="outlined"/>
-                   
-        </Grid>
-          <Grid xs={12}  item>
-            <TextField             
+        <Grid container direction='row' spacing={4} >
+          <Grid xs={12} sm={4} item>
+            <Image
+              src="/Images/ford.png"
+              alt='Picture of gm logo'
+              width={120}
+              height={80}
+              style={{ borderRadius: '50%', display: 'flex', alignItems: 'center', margin: '0px 0px 0px 60px' }}
+            >
+            </Image>
+            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
+              <TextField  label='Ford' variant="outlined" />
+            </Grid>
+            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
+              <TextField label='Ranger' variant="outlined" />
+            </Grid>
+            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
+              <TextField  label='2001' variant="outlined" />
+            </Grid>
+          </Grid>
+          <Grid>
+          <Grid xs={12} item>
+            <TextField
               label="Selecionar marca"
               select
               variant="outlined"
               value={marcas}
-              sx={{width: {sm: 300}}}
+              sx={{ width: { sm: 300 } }}
               onChange={(evento) => {
                 setMarcas(evento.target.value);
               }}
@@ -53,7 +59,7 @@ function Form() {
               label="Selecionar modelo"
               select
               value={modelos}
-              sx={{width: {sm: 300}}}
+              sx={{ width: { sm: 300 } }}
               onChange={(evento) => {
                 setModelos(evento.target.value);
               }}
@@ -70,7 +76,7 @@ function Form() {
               label="Selecionar ano"
               select
               value={ano}
-              sx={{width: {sm: 300}}}
+              sx={{ width: { sm: 300 } }}
               onChange={(evento) => {
                 setAno(evento.target.value);
               }}
@@ -87,6 +93,8 @@ function Form() {
             <Button variant="contained" endIcon={<SendIcon />}>Enviar</Button>
           </Grid>
 
+          </Grid>
+          
         </Grid>
 
       </CardContent>
