@@ -1,15 +1,21 @@
-export interface ICarro{
-    marca_id: number
-    modelo_id: number
-    ano_id: number
+interface Modelo_API {
+  codigo: string;
+  nome: string;
+}
+
+interface Marca_API {
+  codigo: string;
+  nome: string;
 }
 
 export interface IMarca {
-    marcas: [Object]
-    error: string
-    status: boolean
+  marcas: [Marca_API];
+  error: string;
+  status: boolean;
 }
 
-export interface IFipeAPI{
-    
+export interface IModelo {
+  modelos: [Modelo_API];
+  error: string;
+  status: boolean;
 }
