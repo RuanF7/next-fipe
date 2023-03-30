@@ -12,28 +12,22 @@ function Form() {
     <Card style={{ margin: '200px' }}>
       <CardContent>
 
-        <Grid container direction='row' spacing={4} >
-          <Grid xs={12} sm={4} item>
+        <Grid container direction='row' spacing={4} sx={{bgcolor: '#FFF8DC', color: 'text.primary'}}>
+          <Grid lg={4} md={12} sm={4}  item sx={{ width: { sm: 300 } }}>
             <Image
               src="/Images/ford.png"
-              alt='Picture of gm logo'
+              alt='Picture of ford logo'
               width={120}
               height={80}
-              style={{ borderRadius: '50%', display: 'flex', alignItems: 'center', margin: '0px 0px 0px 60px' }}
+              style={{ borderRadius: '50%', display: 'flex', alignItems: 'center', margin: '0px 0px 0px 90px' }}
             >
             </Image>
-            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
-              <TextField  label='Ford' variant="outlined" />
-            </Grid>
-            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
-              <TextField label='Ranger' variant="outlined" />
-            </Grid>
-            <Grid xs={12} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px' }} >
-              <TextField  label='2001' variant="outlined" />
-            </Grid>
+            <Grid lg={12} md={12} sm={3} style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 40px 40px 60px' }} >
+              <TextField  label='Ford Ranger 1994' multiline rows={7} variant="outlined" />
+            </Grid>           
           </Grid>
           <Grid>
-          <Grid xs={12} item>
+          <Grid lg={12} md={12} sm={3} item style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 0px 0px 200px' }}>
             <TextField
               label="Selecionar marca"
               select
@@ -54,7 +48,7 @@ function Form() {
 
           </Grid>
 
-          <Grid xs={12} item>
+          <Grid lg={12} md={12} sm={3} item style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 0px 0px 200px' }}>
             <TextField
               label="Selecionar modelo"
               select
@@ -71,7 +65,7 @@ function Form() {
               <MenuItem value="ranger">Ranger</MenuItem>
             </TextField>
           </Grid>
-          <Grid xs={12} item>
+          <Grid lg={12} md={12} sm={3} item style={{ display: 'flex', alignItems: 'flex-start', margin: '40px 0px 0px 200px' }}>
             <TextField
               label="Selecionar ano"
               select
@@ -89,8 +83,8 @@ function Form() {
             </TextField>
           </Grid>
 
-          <Grid xs={12} item>
-            <Button variant="contained" endIcon={<SendIcon />}>Enviar</Button>
+          <Grid lg={12} md={12} sm={3} item style={{margin: '40px 0px 0px 200px'}}>
+            <Button variant="contained" sx={{color: '#FFF8DC', bgcolor: 'text.primary'}} endIcon={<SendIcon />}>Enviar</Button>
           </Grid>
 
           </Grid>
