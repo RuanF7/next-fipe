@@ -1,4 +1,4 @@
-import { ICarro, IMarca } from "@/models/ApiModels";
+import { IMarca, IModelo } from "@/models/ApiModels";
 
 const BASE_URL = "http://localhost:3000/api/";
 
@@ -14,16 +14,24 @@ async function getMarcas() {
   return marcas;
 }
 
-function getModelo({ marca_id }: ICarro) {
+async function getModelo(marca_id: string) {
+  const modelos: IModelo = await fetch(BASE_URL  + "/modelos/" + marca_id)
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((modelos) => {
+      return modelos;
+    });
+
+  return modelos;
+}
+
+function getAno(marca_id: string, modelo_id: string) {
   return void 0;
 }
 
-function getAno({ marca_id, modelo_id }: ICarro) {
+function getFipe(marca_id: string, modelo_id: string, ano_id: string) {
   return void 0;
 }
 
-function getFipe({ marca_id, modelo_id, ano_id }: ICarro) {
-  return void 0;
-}
-
-export { getMarcas };
+export { getMarcas, getModelo };
