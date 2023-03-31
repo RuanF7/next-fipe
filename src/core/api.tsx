@@ -1,6 +1,6 @@
 import { IMarca, IModelo } from "@/models/ApiModels";
 
-const BASE_URL = "http://localhost:3000/api/";
+const BASE_URL = "https://next-fipe.vercel.app/api";
 
 async function getMarcas() {
   const marcas: IMarca = await fetch(BASE_URL + "/marcas")
@@ -11,11 +11,12 @@ async function getMarcas() {
       return marcas;
     });
 
+  console.log("Passei");
   return marcas;
 }
 
 async function getModelo(marca_id: string) {
-  const modelos: IModelo = await fetch(BASE_URL  + "/modelos/" + marca_id)
+  const modelos: IModelo = await fetch(BASE_URL + "/modelos/" + marca_id)
     .then((resp) => {
       return resp.json();
     })
