@@ -1,9 +1,9 @@
-interface Modelo_API {
+export interface Modelo_API {
   codigo: string;
   nome: string;
 }
 
-interface Marca_API {
+export interface Marca_API {
   codigo: string;
   nome: string;
 }
