@@ -122,9 +122,6 @@ function Form() {
                   setModelos(evento.target.value);
                 }}
               >
-                <MenuItem value="1" selected disabled>
-                  Modelo do Carro
-                </MenuItem>
                 <MenuItem value="celta">Celta</MenuItem>
                 <MenuItem value="ranger">Ranger</MenuItem>
               </TextField>

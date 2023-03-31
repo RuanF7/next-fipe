@@ -1,6 +1,6 @@
 import { IMarca, IModelo } from "@/models/ApiModels";
 
-const BASE_URL = "https://next-fipe.vercel.app/api";
+const BASE_URL = process.env.NEXT_PUBLIC_API_FRONT;
 
 async function getMarcas() {
   const marcas: IMarca = await fetch(BASE_URL + "/marcas")
