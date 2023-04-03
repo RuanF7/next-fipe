@@ -1,5 +1,6 @@
 import React from 'react'
-import { Paper, Typography } from "@mui/material";
+import {  Paper, Typography } from "@mui/material";
+import { Container } from '@mui/system';
 
 
 function Header() {
@@ -7,10 +8,13 @@ function Header() {
 
   return (
     <React.Fragment>
-      <Paper elevation={12} sx={{ width: '600px', margin: '0 0 0 400px' }}>
-        <Typography gutterBottom variant="h3" align="center"  sx={{color: '#FFF8DC', backgroundColor: 'text.primary'}}>Fipe de Carros</Typography>
+      <Container fixed>
+        <Paper elevation={12} sx={{ width: '600px', margin: 'auto' }}>
+          <Typography gutterBottom variant="h3" align="center" sx={{ color: '#FFF8DC', backgroundColor: 'text.primary' }}>Fipe de Carros</Typography>
 
-      </Paper>
+        </Paper>
+      </Container>
+
     </React.Fragment>
   );
 
