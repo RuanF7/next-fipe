@@ -27,12 +27,32 @@ async function getModelo(marca_id: string) {
   return modelos;
 }
 
-function getAno(marca_id: string, modelo_id: string) {
-  return void 0;
+async function getAno(marca_id: string, modelo_id: string) {
+  const anos: IModelo = await fetch(
+    BASE_URL + "/anos/" + marca_id + "/" + modelo_id
+  )
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((anos) => {
+      return anos;
+    });
+
+  return anos;
 }
 
-function getFipe(marca_id: string, modelo_id: string, ano_id: string) {
-  return void 0;
+async function getFipe(marca_id: string, modelo_id: string, ano_id: string) {
+  const fipe: IModelo = await fetch(
+    BASE_URL + "/valor/" + marca_id + "/" + modelo_id + "/" + ano_id
+  )
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((fipe) => {
+      return fipe;
+    });
+
+  return fipe;
 }
 
-export { getMarcas, getModelo };
+export { getMarcas, getModelo, getAno, getFipe };
